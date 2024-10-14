@@ -10,6 +10,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws UnknownHostException, IOException {
+        System.out.println("Client in avvio!");
+        
         Socket s = new Socket("localhost", 5637);
         System.out.println("Il client si è collegato");
 
@@ -31,14 +33,13 @@ public class Main {
 
         out.writeBytes("sono il Client" + "\n");
 
-        String stringRicevuta = in.readLine();
-        System.out.println("La stringa ricevuta: " + stringRicevuta);
+        System.out.println("La stringa ricevuta: " + stringaRicevuta);
 
         s.close();
 
 
 
-        
+
 
 
     }
